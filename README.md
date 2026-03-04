@@ -56,67 +56,23 @@
 ## Технологии
 
 - **WPF (.NET)** — пользовательский интерфейс
-- **SQL Server** — база данных
 - **ADO.NET Entity Framework (EDMX, Database First)** — доступ к данным
-- **Frame Navigation** — навигация по страницам (Назад/Вперёд)
-
----
-
-## Стиль интерфейса
-
-- Шрифт: **Tw Cen MT** (размеры 10/12/14, заголовки — Bold)
-- Цвета:
-  - основной текст: RGB(55, 71, 79)
-  - дополнительный текст: RGB(120, 144, 156)
-  - акцент: RGB(255, 156, 26)
-  - фон: RGB(255, 255, 255)
-- Отступы:
-  - padding: 10 px
-  - margin: не менее 16 px
-- Высота элементов:
-  - маленькие: 22 px
-  - средние: 30 px
-  - большие: 38 px
+- **Frame Navigation** — навигация по страницам (Далее)
 
 ---
 
 ## Структура проекта
 ```
-AdsService/
+PR4akcenova/
 ├─ Pages/
-│ ├─ PublicAdsPage.xaml
-│ ├─ LoginPage.xaml
-│ ├─ RegisterPage.xaml
-│ ├─ UserAdsPage.xaml
-│ ├─ AdEditPage.xaml
-│ └─ CompletedAdsPage.xaml
-├─ Services/
-│ ├─ SessionManager.cs
-│ └─ MessageService.cs
-├─ Converters/
-│ └─ ImagePathToSourceConverter.cs
+│ ├─ Page1.xaml
+│ ├─ Page2.xaml
+│ ├─ Page3.xaml
 ├─ Windows/
-│ └─ ProfitAmountDialog.xaml
-├─ Resources/
-│ ├─ Лого.png
-│ ├─ no_image.png
-│ └─ app.ico
-├─ Model.edmx
+│ └─ MainWindow.xaml
+├─ Imeges/
+│ ├─ formula.png
+│ ├─ formula2.png
+│ └─ formula3.png
 └─ README.md
 ```
-
----
-
-## База данных
-
-Используется база данных **AdsServiceDB** со следующими таблицами:
-- Ads
-- Users
-- Cities
-- Categories
-- AdTypes
-- AdStatuses
-
-Доступ к данным выполняется через:
-```csharp
-Entities.GetContext()
