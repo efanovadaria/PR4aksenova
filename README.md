@@ -12,11 +12,11 @@
 ### Функции:
 №1
 №1 <br>
-<img width="570" height="92" alt="image" src="" /> <br>
+<img width="570" height="92" alt="image" src="https://github.com/efanovadaria/PR4aksenova/blob/master/PR4aksenova/Images/formula.png" /> <br>
 №2 <br>
-<img width="447" height="147" alt="image" src="" /> <br>
+<img width="447" height="147" alt="image" src="https://github.com/efanovadaria/PR4aksenova/blob/master/PR4aksenova/Images/formula2.png" /> <br>
 №3 <br>
-<img width="290" height="60" alt="image" src="" /> <br>
+<img width="290" height="60" alt="image" src="https://github.com/efanovadaria/PR4aksenova/blob/master/PR4aksenova/Images/formula3.png" /> <br>
 
 Разработано графическое приложение WPF для расчёта трех математических функций, согласно ранее полученному варианту
 ---
