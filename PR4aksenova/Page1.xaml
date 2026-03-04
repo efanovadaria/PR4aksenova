@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="Page1">
 
-    <ScrollViewer>
-        <Grid Margin="20" Height="414" Width="344">
+    <ScrollViewer Width="526">
+        <Grid Margin="20" Height="414" Width="472">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -39,7 +39,7 @@
 
             <!-- Кнопки -->
             <StackPanel Grid.Row="6" Orientation="Horizontal"
-                        HorizontalAlignment="Center" Margin="0,121,0,-88">
+                        HorizontalAlignment="Center" Margin="0,122,0,-88" Width="414">
 
                 <Button Content="Вычислить"
                         Width="92"
@@ -55,6 +55,7 @@
                         Width="82"
                         Margin="5"
                         Click="BtnNext_Click" Height="17"/>
+                
             </StackPanel>
 
         </Grid>

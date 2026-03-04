@@ -81,5 +81,21 @@ namespace PR4aksenova
             txtOutput.Clear();
             chart1.Series.Clear();
         }
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            // Подтверждение выхода
+            var result = System.Windows.MessageBox.Show(
+                "Вы действительно хотите выйти из приложения?",
+                "Подтверждение выхода",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                // Закрываем родительское окно, где находится Page
+                Window parentWindow = Window.GetWindow(this);
+                parentWindow?.Close();
+            }
+        }
     }
 }
