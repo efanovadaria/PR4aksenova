@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PR4aksenova
@@ -49,14 +47,15 @@ namespace PR4aksenova
 
                 for (double x = x0; x <= xk; x += dx)
                 {
-                    if (x == b) continue; // избегаем ln(0)
-
-                    double numerator = Math.Sqrt(Math.Abs(x - b));
-                    double denominator = Math.Pow(Math.Abs(Math.Pow(b, 3) - Math.Pow(x, 3)), 1.5);
-
-                    if (denominator == 0) continue;
-
-                    double y = numerator / denominator + Math.Log(Math.Abs(x - b));
+                    double y;
+                    try
+                    {
+                        y = MathFunctions.CalculatePage3(x, b);
+                    }
+                    catch (ArgumentException)
+                    {
+                        continue;
+                    }
 
                     txtOutput.AppendText($"x = {x:F3}   y = {y:F5}\n");
 
