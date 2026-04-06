@@ -18,43 +18,19 @@ namespace PR4aksenova
                 double x = Convert.ToDouble(txtX.Text);
                 double y = Convert.ToDouble(txtY.Text);
 
-                double fx = 0;
+                MathFunctions.FxKind? kind = null;
+                if (rbSinh.IsChecked == true) kind = MathFunctions.FxKind.Sinh;
+                else if (rbSquare.IsChecked == true) kind = MathFunctions.FxKind.Square;
+                else if (rbExp.IsChecked == true) kind = MathFunctions.FxKind.Exp;
 
-                // Выбор функции f(x)
-                if (rbSinh.IsChecked == true)
-                {
-                    fx = Math.Sinh(x);
-                }
-                else if (rbSquare.IsChecked == true)
-                {
-                    fx = Math.Pow(x, 2);
-                }
-                else if (rbExp.IsChecked == true)
-                {
-                    fx = Math.Exp(x);
-                }
-                else
+                if (kind is null)
                 {
                     MessageBox.Show("Выберите функцию f(x)!");
                     return;
                 }
 
-                double c;
-
-                if (x - y == 0)
-                {
-                    c = Math.Pow(fx, 2) + Math.Pow(y, 2) + Math.Sin(y);
-                }
-                else if (x - y > 0)
-                {
-                    c = Math.Pow(fx - y, 2) + Math.Cos(y);
-                }
-                else
-                {
-                    c = Math.Pow(y - fx, 2) + Math.Tan(y);
-                }
-
-                txtResult.Text = c.ToString("F4");
+                double result = MathFunctions.CalculatePage2(x, y, kind.Value);
+                txtResult.Text = result.ToString("F4");
             }
             catch (FormatException)
             {
