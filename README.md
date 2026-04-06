@@ -55,7 +55,7 @@
 ---
 
 ### Обозреватель тестов
-<img  alt="image" src="" /> <br>
+<img  alt="image" src="https://github.com/efanovadaria/PR4aksenova/blob/PR6.2/Снимок%20экрана%202026-04-06%20151706.png" /> <br>
 
 ---
 
