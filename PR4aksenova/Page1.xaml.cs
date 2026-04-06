@@ -18,8 +18,25 @@ namespace PR4aksenova
                 double x = Convert.ToDouble(txtX.Text);
                 double y = Convert.ToDouble(txtY.Text);
                 double z = Convert.ToDouble(txtZ.Text);
-                double result = MathFunctions.CalculatePage1(x, y, z);
-                txtResult.Text = result.ToString("F4");
+
+                // Проверки области допустимых значений
+                if (y < 0)
+                    throw new Exception("Y не может быть отрицательным (корень из отрицательного числа).");
+
+                if (x - 1 < 0)
+                    throw new Exception("X должен быть ≥ 1 (корень из x-1).");
+
+                if (x == y)
+                    throw new Exception("X не должен быть равен Y (деление на 0).");
+
+                double numerator = Math.Sqrt(y) + Math.Sqrt(x - 1);
+                double denominator = Math.Pow(4 * Math.Abs(x - y), 1.0 / 3.0);
+
+                double trigPart = Math.Pow(Math.Sin(z), 2) + Math.Tan(z);
+
+                double f = (numerator / denominator) * trigPart;
+
+                txtResult.Text = f.ToString("F4");
             }
             catch (FormatException)
             {
